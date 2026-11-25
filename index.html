@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" data-theme="linen">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hearth — a cosy kitchen for everyday cooking</title>
+<meta name="description" content="Hearth: 60 original home recipes with a servings scaler, unit converter, pantry search, weekly meal planner, shopping lists and a calm step-by-step cook mode. Free, private, works offline in your browser.">
+<meta property="og:title" content="Hearth — a cosy kitchen for everyday cooking">
+<meta property="og:description" content="60 original home recipes, a weekly planner, aisle-sorted shopping lists and a big-text cook mode with timers. Measure twice, taste always.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kumarnikhildeveloperaccount.github.io/hearth/">
+<meta name="theme-color" content="#f6f0e6">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+<a class="skip" href="#view">Skip to content</a>
+<header class="site-head">
+  <a class="brand" href="#/" aria-label="Hearth home">
+    <span class="brand-pot" id="brandPot" aria-hidden="true">
+      <svg viewBox="0 0 64 64" width="40" height="40"><g class="steam"><path d="M24 22c-3-4 3-6 0-12"/><path d="M33 22c-3-4 3-6 0-12"/><path d="M42 22c-3-4 3-6 0-12"/></g><path class="pot" d="M8 29c1-.6 47-.8 48 .3C55 44 46 54 32 54S9 44 8 29z"/><path class="pot-rim" d="M5 29.5c9-.8 45-1 54 0"/></svg>
+    </span>
+    <span class="brand-text"><b>Hearth</b><small>a cosy kitchen for everyday cooking</small></span>
+  </a>
+  <button class="icon-btn nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <nav class="main-nav" id="mainNav" aria-label="Main">
+    <a href="#/recipes" data-nav="recipes">Recipes</a>
+    <a href="#/pantry" data-nav="pantry">What can I cook?</a>
+    <a href="#/plan" data-nav="plan">Planner</a>
+    <a href="#/shop" data-nav="shop">Shopping</a>
+    <a href="#/favs" data-nav="favs">Favourites</a>
+    <a href="#/add" data-nav="add">Add recipe</a>
+    <a href="#/about" data-nav="about">About</a>
+  </nav>
+  <div class="head-tools">
+    <button class="icon-btn unit-btn" id="unitToggle" title="Switch units" aria-label="Switch between metric and US units">Metric</button>
+    <button class="icon-btn" id="soundToggle" aria-pressed="false" title="Kitchen sounds (off)" aria-label="Toggle kitchen sounds">🔇</button>
+    <label class="theme-pick"><span class="sr">Theme</span>
+      <select id="themeSelect" aria-label="Theme">
+        <option value="linen">Morning Linen</option>
+        <option value="night">Night Kitchen</option>
+        <option value="farm">Farmhouse</option>
+        <option value="minimal">Minimal</option>
+      </select>
+    </label>
+    <a class="icon-btn" href="#/settings" title="Your data &amp; settings" aria-label="Your data and settings">⚙</a>
+  </div>
+</header>
+
+<main id="view" tabindex="-1"></main>
+
+<footer class="site-foot">
+  <p class="quip" id="footQuip">Measure twice, taste always.</p>
+  <p class="credits">Designed &amp; built by <b>Kumar Nikhil</b> ·
+    <a href="https://kumarnikhildeveloperaccount.github.io/" target="_blank" rel="noopener">Portfolio</a> ·
+    <a href="https://www.linkedin.com/in/kumar-nikhil-1000a9192/" target="_blank" rel="noopener">LinkedIn</a> ·
+    <a href="mailto:nkashyapnikhilnk@gmail.com">Email</a> ·
+    <a href="https://kumarnikhildeveloperaccount.github.io/" target="_blank" rel="noopener">More projects by Kumar Nikhil →</a></p>
+  <p class="small">Everything stays on this device — notes, plans and photos never leave your browser. Nutrition figures are rough estimates, not medical advice.</p>
+  <p class="gratitude">With gratitude to God — Om Namah Paarvati Pateh, Har Har Mahadev. May God bless you and everyone.</p>
+</footer>
+
+<section id="cook" class="cook" hidden aria-label="Cook mode" role="dialog" aria-modal="true"></section>
+<aside id="timerTray" class="timer-tray" aria-label="Timers" hidden></aside>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<noscript><p class="noscript">Hearth needs JavaScript to stir the pot. Please enable it.</p></noscript>
+
+<script src="js/data-1.js"></script>
+<script src="js/data-2.js"></script>
+<script src="js/util.js"></script>
+<script src="js/store.js"></script>
+<script src="js/art.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/app.js"></script>
+<script src="js/views.js"></script>
+<script src="js/cook.js"></script>
+</body>
+</html>

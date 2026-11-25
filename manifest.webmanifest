@@ -1,0 +1,13 @@
+{
+  "name": "Hearth — a cosy kitchen for everyday cooking",
+  "short_name": "Hearth",
+  "description": "Home recipes, meal planner, shopping lists and cook mode — all in your browser.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f0e6",
+  "theme_color": "#c8643b",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
