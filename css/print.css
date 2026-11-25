@@ -1,0 +1,46 @@
+/* Hearth print styles: tidy recipe cards and shopping lists */
+@page{margin:14mm}
+html,body{background:#fff!important;color:#111!important}
+body::before,body::after{display:none!important}
+.site-head,.site-foot,.timer-tray,.toast,.cook,.skip,.no-print,.modal-wrap,.crumbs,.sprinkle{display:none!important}
+main{padding:0!important;max-width:none!important;perspective:none!important}
+.view{animation:none!important;transform:none!important}
+.view::before{display:none!important}
+*{box-shadow:none!important;animation:none!important;transition:none!important}
+a{color:#111!important;text-decoration:none!important}
+
+/* Recipe card */
+body[data-print="recipe"] .recipe{border:1.5px solid #333;border-radius:10px;padding:10mm}
+.recipe-head{display:grid!important;grid-template-columns:62mm 1fr!important;gap:8mm!important;margin:0 0 6mm!important;break-inside:avoid}
+.recipe-art{border:0!important;border-radius:6px!important;aspect-ratio:4/3}
+.recipe-art .art-steam{display:none}
+.recipe-intro h1{font-size:22pt;margin:0 0 2mm}
+.recipe-intro .lead{font-size:11pt;color:#333!important}
+.meta li{border:1px solid #999!important;background:#fff!important}
+.recipe-body{display:grid!important;grid-template-columns:70mm 1fr!important;gap:8mm!important}
+.paper{border:0!important;padding:0!important;background:#fff!important}
+.ingredients{position:static!important}
+.ing-list li{border-bottom:1px dotted #bbb}
+.ing-list label{min-height:0!important;padding:1.6mm 0!important;font-size:10.5pt}
+.tick{width:3.4mm!important;height:3.4mm!important;border:1px solid #333!important;border-radius:1mm!important;background:#fff!important;color:transparent!important;transform:none!important}
+li.done .nm,li.done .amt{text-decoration:none!important;opacity:1!important}
+.nutrition dl div{border:1px solid #bbb!important;background:#fff!important}
+.steps li{padding:0 0 4mm 11mm!important;break-inside:avoid}
+.steps li::before{display:none}
+.steps .num{width:7mm!important;height:7mm!important;font-size:10pt!important;border:1px solid #333!important;color:#111!important}
+.steps p{font-size:11pt!important;margin:1mm 0!important}
+.notes{border-top:1px solid #bbb!important;padding-top:3mm!important}
+.notes textarea{border:0!important;background:none!important;font-size:10pt;min-height:0!important;height:auto;resize:none}
+.notes:has(textarea:placeholder-shown){display:none}
+.print-foot{display:block!important;text-align:center;font-size:9pt;color:#555;margin-top:6mm;font-style:italic}
+.diet{border:1px solid #333!important;background:#fff!important}
+
+/* Shopping list */
+body[data-print="shop"] .page-head .lead{font-size:10pt}
+.aisles{columns:2!important;column-gap:10mm!important}
+.aisle{break-inside:avoid;border:1px solid #bbb!important;padding:4mm!important;border-radius:4px;margin-bottom:5mm}
+.aisle h2{font-size:12pt!important}
+.aisle h2::before{display:none}
+.aisle label{min-height:0!important;padding:1.2mm 0!important;font-size:10.5pt}
+.aisle .from{display:none}
+.aisle li.done{display:none}
