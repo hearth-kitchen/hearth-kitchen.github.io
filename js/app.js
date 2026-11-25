@@ -54,6 +54,7 @@
       }
     }
     document.addEventListener('keydown', key);
+    window.addEventListener('hashchange', function onNav() { window.removeEventListener('hashchange', onNav); if (wrap.isConnected) { last = null; close(); } });
     wrap.addEventListener('click', function (e) { if (e.target === wrap) close(); });
     $('.modal-x', wrap).addEventListener('click', close);
     var api = { el: wrap, close: close };

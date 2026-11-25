@@ -110,7 +110,8 @@
       ['oats', 90], ['rice', 185], ['couscous', 175], ['bulgur', 160], ['semolina', 165], ['cocoa', 85], ['chocolate chips', 170], ['grated', 100],
       ['nuts', 120], ['peanuts', 145], ['pumpkin seeds', 130], ['raisins', 145], ['cranberries', 120], ['blueberries', 150], ['berries', 145], ['peas', 135],
       ['dal', 200], ['lentils', 190], ['dried chickpeas', 200], ['poha', 80], ['yogurt', 245]];
-    for (var i = 0; i < t.length; i++) if (n.indexOf(t[i][0]) > -1) return t[i][1];
+    if (/\b(canned|tinned|can of|drained|cooked|fresh|frozen)\b/.test(n)) return 0;
+    for (var i = 0; i < t.length; i++) if (new RegExp('(^|[^a-z])' + t[i][0] + '([^a-z]|$)').test(n)) return t[i][1];
     return 0;
   }
 
@@ -127,7 +128,7 @@
   U.unitLabel = function (unit, qty) {
     if (!unit) return '';
     if (unit === 'floz') return 'fl oz';
-    if (qty > 1 && PLURAL[unit]) return PLURAL[unit];
+    if (Math.round(qty * 8) / 8 > 1 && PLURAL[unit]) return PLURAL[unit];
     return unit;
   };
 
