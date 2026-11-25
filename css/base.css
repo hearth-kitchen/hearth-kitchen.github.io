@@ -192,3 +192,8 @@ main{display:block;max-width:1320px;margin:0 auto;padding:clamp(18px,3vw,40px) c
 }
 html.lowpower body::after{animation:none}
 html.lowpower .site-head{-webkit-backdrop-filter:none;backdrop-filter:none;background:var(--bg)}
+
+/* header nav never wraps on wide screens */
+.main-nav a { white-space: nowrap; }
+@media (min-width: 1000px) { .main-nav { flex-wrap: nowrap; flex: 1 1 auto; min-width: 0; justify-content: center; } }
+@media (min-width: 1000px) and (max-width: 1400px) { .main-nav a { font-size: .92rem; padding-inline: .55em; } }
